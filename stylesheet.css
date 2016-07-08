@@ -1,0 +1,66 @@
+body {
+	background-color: pink;
+	height: 100%;
+	width: 100%; 
+}
+
+#startBase {
+	bottom: 10%;
+	height: 2em;
+	width: 12em;
+	background-color: black;
+	color: white;
+	position: absolute;
+	float: right;
+	left: 5%;
+	}
+
+#secondBase {
+	left: 40%;
+	bottom: 10%;
+	height: 2em;
+	width: 12em;
+	background-color: black;
+	color: white;
+	position: absolute;
+	float: right;
+}
+
+#thirdBase {
+	right: 5%;
+	float: right;
+	bottom: 10%;
+	height: 2em;
+	width: 12em;
+	background-color: black;
+	color: white;
+	position: absolute;
+}
+#baseWrapper {
+	height: 30em;
+	width: 90%;
+	margin: 5em auto 0 auto;
+	border: 3px blue solid;
+	position: relative;
+	}
+
+table {
+	border: 1;
+	width: 200;
+	position: absolute;
+	top: 10%;
+	left: 5%;
+	}
+td, th {
+border: 1px solid #999;
+	padding: 0.5rem;
+}
+	
+/*   position: relative; */
+/*   height: 20%; */
+/*   width: 100%; */
+/*   margin: 0 auto; */
+/*   text-align: center; */
+/*   border: 2em black solid; */
+/*   background-color: black; */
+/*   } */
