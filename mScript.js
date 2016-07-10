@@ -51,19 +51,11 @@ function handleDropEnd(ev) {
 	this.classList.remove('.over');
 	console.log('drop end remove over');
 }
-function handleDropStart(ev) {
-	this.style.opacity = '.4';
-	dragSrcEL = this;
-	e.dataTransfer.effectAllowed = 'move';
-	e.dataTransfer.setData("application/json", JSON.stringify([ev.target.id,(ev.offsetX || ev.clientX - $(ev.target).offset().left),(ev.offsetY || ev.clientY - $(ev.target).offset().top)]));
-	console.log('drop start');
-}
 // jQuery event handler for drag start
 $(document).ready(function() {
 	$('#largeBox').on('drag', dragStart);
 	$('.base').on('dragenter', handleDragEnter);
 	$('.base').on('dragleave', handleDragLeave);
 	$('.base').on('drop', handleDropEnd);
-	$('.base').on('drop', handleDropStart);
 });
 

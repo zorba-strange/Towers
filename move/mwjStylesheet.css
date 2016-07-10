@@ -1,0 +1,27 @@
+body {
+	background-color: pink;
+}
+
+/* this is the class for any snap Targets */
+.snapTarget { 
+	height: 3em;
+	width: 8em;
+	margin: 5em auto 1em auto;
+	border: 2px solid blue;
+}
+
+#dragableOne {
+	background-color: black;
+	height: 3em;
+	width: 8em;
+	margin: 1em auto 1em auto;
+}
+
+.ui-widget-content {
+	margin: 0;
+}
+
+.holdingItem {
+	background-color: yellow;
+};
+
