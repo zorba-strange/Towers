@@ -2,10 +2,12 @@ $(document).ready(function() {
 console.log('running')
 function Drop() {
 	$('#dragableOne').draggable({
+		snap: '.snapTarget',
+		snapMode: 'inner',
 		revert : function(event, ui) {
 		$(this).data('uiDraggable').originalPossition = {
-			top: 5,
-			left: 5
+			top: 0,
+			left: 0
 			};
 			return !event;
 		}
@@ -13,18 +15,16 @@ function Drop() {
 }
 	
 	$('.snapTarget').droppable({
+		out: function(event, ui) {
+		$(this).removeClass('holding');
+		$(this).addClass('empty');
+		console.log(this.id, this.className);
+		},
 		drop: function( event, ui ) {
-	console.log('snapTarget drop');
-	$(this).addClass('.holdingItem');
-	holdingCheck();
+		$(this).removeClass('empty');
+		$(this).addClass('holding');
+	console.log(this.id, this.className);
 }
 });
-function holdingCheck() {
-	if($('.snapTarget').hasClass('.holdingItem') == true) {
-	console.log('has box');
-	} else {
-	console.log('has no box');
-	}
-	}
 	Drop();
 });
