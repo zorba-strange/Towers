@@ -10,17 +10,32 @@ table {
 
 #b1{
 	background-color: blue;
-	height: 3em;
-	width: 6em;
+	height: 1em;
+	width: 4em;
 	margin: 0 auto;
+	border: 1px pink solid;
+	border-radius: 10px;
 }
 #b2{
 	background-color: black;
-	height: 3em;
+	height: 1em;
+	width: 6em;
+	margin: 0 auto;
+	border: 1px pink solid;
+	border-radius: 10px;
+}
+#b3 {
+	background-color: yellow;
+	height: 1em;
 	width: 8em;
 	margin: 0 auto;
+	border: 1px pink solid;
+	border-radius: 10px;
 }
+
 td, th {
+	width: 12em;
+	height: 3em;
 	border: 1px black solid;
 }
 #baseOne {
@@ -29,6 +44,11 @@ td, th {
 	width: 10em;
 }
 #baseTwo {
+	background-color: yellow;
+	height: 3em;
+	width: 10em;
+}
+#baseThree {
 	background-color: yellow;
 	height: 3em;
 	width: 10em;

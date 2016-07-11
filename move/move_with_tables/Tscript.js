@@ -61,7 +61,14 @@ $(document).ready(function(){
 				if (parseInt(idLast) < parseInt(dropingId)) {
 					$(this).droppable('disable');
 		}
-	};
+	} else if ($(this).hasClass('col3')) {
+				var dropId = ui.draggable.attr("id");
+				var idLast = $('.col3').last().attr('id');
+				var dropingId = dropId.charAt(1);
+				if (parseInt(idLast) < parseInt(dropingId)) {
+					$(this).droppable('disable');
+		}
+	}
 	}
 	});
 	drag.draggable({
