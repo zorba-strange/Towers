@@ -8,13 +8,13 @@ table {
 	margin: 5em auto;
 }
 
-#small {
+#b1{
 	background-color: blue;
 	height: 3em;
 	width: 6em;
 	margin: 0 auto;
 }
-#large {
+#b2{
 	background-color: black;
 	height: 3em;
 	width: 8em;
