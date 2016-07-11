@@ -1,0 +1,28 @@
+body {
+	background: pink;
+}
+
+table { 
+	border: 2px black solid;
+	margin: 0 auto;
+}
+
+.tower {
+	border: 2px black solid;
+	height: auto;
+	width: auto;
+}
+
+.block {
+	height: 3em;
+	width: 8em;
+	margin: 0 auto;
+	border: 1px black solid;
+	background-color: yellow;
+}
+
+.blockHolder {
+	border: 1px black solid;
+	height: 4em;
+	width: 10em;
+}
