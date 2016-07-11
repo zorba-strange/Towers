@@ -16,7 +16,12 @@ function drag(ev) {
 
 // make dragging object opacity to give user visual feedback.
 function dragStart(ev) {
-this.style.opacity = '.0';
+this.style.opacity = '.4';
+
+dragSrcEl = this;
+ev.originalEvent.dataTransfer.effectAllowed = 'move';
+ev.dataTransfer.setData('text/html', ev.target.id);
+console.log('setting that data');
 }
 // In the case of dragging something like a link, we need to prevent the
 // browser's default behavior, which is to navigate to that link. To do
@@ -47,15 +52,27 @@ function handleDragLeave(ev) {
 // will remove the class .over when dropped
 // this is currently not running not sure why
 function handleDropEnd(ev) {
-	ev.preventDefault();
+	console.log('dropEnd');
+	ev.stopPropagation();
+	if (dragSrcEl != this){
+		dragSrcEl.innerHTML = this.HTML;
+		this.innHTML = ev.dataTransfer.getData('text/html');
+	}
+	return false;
+}
+// handle shit when the drag ends.
+function handleDragEnd(ev) {
+	console.log(this);
 	this.classList.remove('.over');
 	console.log('drop end remove over');
-}
+};
+var dragSrcEl = null;
 // jQuery event handler for drag start
 $(document).ready(function() {
 	$('#largeBox').on('drag', dragStart);
 	$('.base').on('dragenter', handleDragEnter);
 	$('.base').on('dragleave', handleDragLeave);
-	$('.base').on('drop', handleDropEnd);
+	$('#largeBox').on('drop', handleDropEnd);
+	$('#largeBox').on('dragend', handleDragEnd);
 });
 
