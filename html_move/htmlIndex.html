@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <title></title>
 				<link rel="stylesheet" href="htmlStylesheet.css">
-				<script src="htmlJs.hs"></script>
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+				<script src="htmlJs.js"></script>
 </head>
 <body>
 				<table>
@@ -15,13 +16,15 @@
 					</tr>
 					<tr>
 						<td class="blockHolder">
-							<div id='blockOne' class='block'>one</div>
+							<img src='../blocks/greenBlock.png'
+							onmousedown='initDrag(this, event)' onmouseup='drop(this)' alt='block for moving' class='block'>
 						</td>
 						<td class="blockHolder">
-							<div id='blockTwo' class='block'>two</div>
+							<img src='../blocks/redBlock.png' alt='block for moving'
+							class='block' draggable='true'>
+						</td>
 						</td >
-						<td class="blockHolder">
-							<div id='blockThree' class='block'>three</div>
+						<td class="blockHolder"></td>
 						</td>
 					</tr>
 					<tr>

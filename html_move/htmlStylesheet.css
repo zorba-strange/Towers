@@ -18,10 +18,10 @@ table {
 	width: 8em;
 	margin: 0 auto;
 	border: 1px black solid;
-	background-color: yellow;
 }
 
 .blockHolder {
+	text-align: center;
 	border: 1px black solid;
 	height: 4em;
 	width: 10em;
