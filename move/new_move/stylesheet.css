@@ -2,11 +2,23 @@ body {
 	background-color: pink;
 }
 
+p, h1{
+font-family: Courier New;
+margin: 10px auto;
+text-align: center;
+}
+
+select {
+	margin: 10px auto;
+	display: block;
+}
+
 #center {
 	text-align: center;
 	margin: 0 auto;
 	width: 70em;
 	height: 30em;
+	position: relative;
 }
 .row {
 	height: 20em;
@@ -16,10 +28,30 @@ body {
 	border-bottom: 8px black solid;
 	text-align: center;
 	padding-bottom: 10px;
+	display: flex;
+	flex-direction: column-reverse;
+}
+.backColumns {
+	height: 25em;
+	width: .5em;
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+	background-color: black;
+}
+
+#backC1{
+	left: 51.2em;
+}
+#backC2{
+	left: 34.2em;
+}
+#backC3{
+	left: 17.4em;
 }
 
 .brick {
-	background-color: blue;
+	background-color: black;;
 	margin:0 auto;
 	margin-bottom: 1%;
 	padding: 0;

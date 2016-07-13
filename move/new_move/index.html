@@ -14,7 +14,10 @@
 	</head>
 
 	<body>
-		<p>Welcome to Tower of Hanoi<p>
+		<h1>Welcome to Tower of Hanoi</h1>
+		<p><strong>Rules</strong>:<br> The goal of the puzzle is to move all the disks from the
+		leftmost peg to the rightmost peg.Move only one disk at a time. A larger disk may not be placed ontop of a smaller disk.</p>
+		<p>Choose how many bricks you would like to work with.</p>
 		<select id='level'>
 			<option value="3">3</option>
 			<option value="4">4</option>
@@ -26,6 +29,9 @@
 		<div id='col1' class='row' droppable=true ></div>
 		<div id='col2' class='row' droppable=true></div>
 		<div id='col3' class='row' droppable=true></div>
+			<div id='backC1' class='backColumns'></div>
+			<div id='backC2' class='backColumns'></div>
+			<div id='backC3' class='backColumns'></div>
 	</div>
 	</body>
 </html>

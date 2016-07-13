@@ -23,7 +23,8 @@ $(document).ready(function(){
 		var brickId = 'brick' + i;
 			col1.append("<div class=brick draggable id=" + brickId + "></div>");
 		$('.brick').height(Math.floor(100/num)+'%')
-		var width = (parseInt(i) + parseInt(num)).toString();
+		// var width = (parseInt(i) + parseInt(num)).toString();
+		var width = (parseInt(num+2) - parseInt(i)).toString();
 		$('#' + brickId).css('width', width + 'em')
 		};
 	}
@@ -35,7 +36,7 @@ $(document).ready(function(){
 }
 // Move bricks from one colum to the next
 	function moveBricks(colId) {
-		var firstKid = $('#' + colId).find('.brick').first();
+		var firstKid = $('#' + colId).find('.brick').last();
 		brick = $(firstKid).attr('id')
 		$('#' + brick).css('opacity', 0.5);
 		return brick
@@ -51,19 +52,18 @@ $(document).ready(function(){
 			console.log('to big');
 			return;
 		} else {
-			$('#' + col).prepend(brick);
+			$('#' + col).append(brick);
 			$('#' + col).on('click', moveBricks);
 		};
 }
 // Compair brick sizes when dropping
-
 	function brickCompair(col, brick){
-		var firstKidId = $('#' + col).find('.brick').first().attr('id');
+		var firstKidId = $('#' + col).find('.brick').last().attr('id');
 		var brickId = $(brick).attr('id');
 		if(firstKidId === undefined) {
 			return;
 		}else {
-		if (parseInt(firstKidId.charAt(5)) < parseInt(brickId.charAt(5))){
+		if (parseInt(firstKidId.charAt(5)) > parseInt(brickId.charAt(5))){
 		return true;
 		} else {
 		return false;
@@ -81,8 +81,13 @@ $(document).ready(function(){
 		getID(this);
 		appendBrick(colId, brick)
 		}
+		if ($('#col1, #col2').children().length === 0){
+		console.log('winner!');
+	} else {
+		console.log('not winner');
+	}
 	})
-	console.log($('#col3').lenght); 
+
 });
 
 
