@@ -21,7 +21,7 @@ $(document).ready(function(){
 		num = parseInt(num);
 		for(i = 1; i != num+1; i++){
 		var brickId = 'brick' + i;
-			col1.append("<div class=brick id=" + brickId + "></div>");
+			col1.append("<div class=brick draggable id=" + brickId + "></div>");
 		$('.brick').height(Math.floor(100/num)+'%')
 		var width = (parseInt(i) + parseInt(num)).toString();
 		$('#' + brickId).css('width', width + 'em')
@@ -40,33 +40,30 @@ $(document).ready(function(){
 		$('#' + brick).css('opacity', 0.5);
 		return brick
 	}
-// Append element to new postion 
+// Append element to new postion
 	function appendBrick(col, brick){
+		console.log('appending');
 		$('#' + brick).css('opacity', 10);
 		brick = $('#' + brick);
 		beingDragged = false;
 		var toBig = brickCompair(col, brick);
-		console.log(toBig);
 		if(toBig == true){
+			console.log('to big');
 			return;
 		} else {
 			$('#' + col).prepend(brick);
 			$('#' + col).on('click', moveBricks);
-		};	
+		};
 }
 // Compair brick sizes when dropping
+
 	function brickCompair(col, brick){
-		console.log(col);
 		var firstKidId = $('#' + col).find('.brick').first().attr('id');
-		console.log(firstKidId);
 		var brickId = $(brick).attr('id');
-		console.log(brickId);
 		if(firstKidId === undefined) {
 			return;
-			console.log('nothing there');
 		}else {
 		if (parseInt(firstKidId.charAt(5)) < parseInt(brickId.charAt(5))){
-		console.log('To big');
 		return true;
 		} else {
 		return false;
@@ -80,8 +77,25 @@ $(document).ready(function(){
 		getID(this);
 		moveBricks(colId);
 	} else {
+		console.log('else');
 		getID(this);
 		appendBrick(colId, brick)
 		}
 	})
+	console.log($('#col3').lenght); 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
