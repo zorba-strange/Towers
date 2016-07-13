@@ -5,6 +5,7 @@
   <meta charset="utf-8">
 	<title>Index Title</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<link rel='stylesheet' href='jvideo.css'>
 	<link rel="stylesheet"
 	href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 	<script
@@ -14,10 +15,14 @@
 	</head>
 
 	<body>
+	<!-- <div style="position: fixed; z-index: -99; width: 100%; height: 100%"> -->
+	<!--   <iframe id='video' src='https://youtu.be/embed/dQw4w9WgXcQ' frameborder='0'></iframe> -->
+	<!-- </div> -->
 		<h1>Welcome to Tower of Hanoi</h1>
 		<p><strong>Rules</strong>:<br> The goal of the puzzle is to move all the disks from the
-		leftmost peg to the rightmost peg.Move only one disk at a time. A larger disk may not be placed ontop of a smaller disk.</p>
-		<p>Choose how many bricks you would like to work with.</p>
+		left most tower to the right most tower. You can only move one disk at a time. A larger disk may not be placed on top of a smaller disk.</p>
+		
+		<p>Choose how many disks you would like to work with.</p>
 		<select id='level'>
 			<option value="3">3</option>
 			<option value="4">4</option>
@@ -25,6 +30,10 @@
 			<option value="6">6</option>
 			<option value="7">7</option>
 		</select>
+		<div  class="timer"><strong>TIME</strong></div>
+		<div id="time" class="timer">0</div>
+		<div class="counter"><strong>MOVES</strong></div>
+		<div id='count'class='counter'>0</div>
 	<div id="center">
 		<div id='col1' class='row' droppable=true ></div>
 		<div id='col2' class='row' droppable=true></div>
@@ -33,5 +42,8 @@
 			<div id='backC2' class='backColumns'></div>
 			<div id='backC3' class='backColumns'></div>
 	</div>
+	<audio controls>
+		<source src='fish.M4A' type="audio/mp4">
+	</audio>
 	</body>
 </html>

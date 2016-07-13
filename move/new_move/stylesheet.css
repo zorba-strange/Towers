@@ -4,10 +4,15 @@ body {
 
 p, h1{
 font-family: Courier New;
-margin: 10px auto;
+margin: 20px auto;
 text-align: center;
+width: 80%;
 }
 
+button{ 
+	margin:0 auto;
+	text-align: center;
+}
 select {
 	margin: 10px auto;
 	display: block;
@@ -15,15 +20,15 @@ select {
 
 #center {
 	text-align: center;
-	margin: 0 auto;
+	margin: 0 auto 10em auto; 
 	width: 70em;
-	height: 30em;
+	height: 22em;
 	position: relative;
 }
 .row {
 	height: 20em;
 	width: 15em;
-	margin: 10em 1em;
+	margin: 1em 1em;
 	float: left;
 	border-bottom: 8px black solid;
 	text-align: center;
@@ -32,7 +37,7 @@ select {
 	flex-direction: column-reverse;
 }
 .backColumns {
-	height: 25em;
+	height: 20em;
 	width: .5em;
 	position: absolute;
 	bottom: 0;
@@ -50,6 +55,21 @@ select {
 	left: 17.4em;
 }
 
+.counter {
+	margin: 0 auto;
+	text-align: center;
+	}
+/* #video { */
+/*   width: 100%; */
+/*   height: 100%; */
+/*   } */
+.timer{
+	margin: 0 auto;
+	text-align: center;
+}
+audio {
+	display: none;
+}
 .brick {
 	background-color: black;;
 	margin:0 auto;
