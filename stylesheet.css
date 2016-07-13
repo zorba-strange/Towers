@@ -1,66 +1,89 @@
 body {
 	background-color: pink;
-	height: 100%;
-	width: 100%; 
 }
 
-#startBase {
-	bottom: 10%;
-	height: 2em;
-	width: 12em;
-	background-color: black;
-	color: white;
-	position: absolute;
-	float: right;
-	left: 5%;
-	}
-
-#secondBase {
-	left: 40%;
-	bottom: 10%;
-	height: 2em;
-	width: 12em;
-	background-color: black;
-	color: white;
-	position: absolute;
-	float: right;
+p, h1{
+font-family: Courier New;
+margin: 20px auto;
+text-align: center;
+width: 80%;
 }
 
-#thirdBase {
-	right: 5%;
-	float: right;
-	bottom: 10%;
-	height: 2em;
-	width: 12em;
-	background-color: black;
-	color: white;
-	position: absolute;
+button{ 
+	margin:0 auto;
+	text-align: center;
 }
-#baseWrapper {
-	height: 30em;
-	width: 90%;
-	margin: 5em auto 0 auto;
-	border: 3px blue solid;
+select {
+	margin: 10px auto;
+	display: block;
+}
+
+#center {
+	text-align: center;
+	margin: 0 auto 10em auto; 
+	width: 70em;
+	height: 22em;
 	position: relative;
-	}
-
-table {
-	border: 1;
-	width: 200;
-	position: absolute;
-	top: 10%;
-	left: 5%;
-	}
-td, th {
-border: 1px solid #999;
-	padding: 0.5rem;
 }
-	
-/*   position: relative; */
-/*   height: 20%; */
+.row {
+	height: 20em;
+	width: 15em;
+	margin: 1em 1em;
+	float: left;
+	border-bottom: 8px black solid;
+	text-align: center;
+	padding-bottom: 10px;
+	display: flex;
+	flex-direction: column-reverse;
+}
+.backColumns {
+	height: 20em;
+	width: .5em;
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+	background-color: black;
+}
+
+#backC1{
+	left: 51.2em;
+}
+#backC2{
+	left: 34.2em;
+}
+#backC3{
+	left: 17.4em;
+}
+
+.counter {
+	margin: 0 auto;
+	text-align: center;
+	}
+/* #video { */
 /*   width: 100%; */
-/*   margin: 0 auto; */
-/*   text-align: center; */
-/*   border: 2em black solid; */
-/*   background-color: black; */
+/*   height: 100%; */
 /*   } */
+.timer{
+	margin: 0 auto;
+	text-align: center;
+}
+audio {
+	display: none;
+}
+.brick {
+	background-color: black;;
+	margin:0 auto;
+	margin-bottom: 1%;
+	padding: 0;
+	border-radius: 5px;
+}
+
+/* .brick:last-child { */
+/*   background-color: yellow; */
+/*   position: absolute; */
+/*   margin: 0 auto; */
+/*   bottom: 0; */
+/*   } */
+.row:first-of-type {
+	margin-left: 10em;
+}
