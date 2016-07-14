@@ -65,8 +65,10 @@ $(document).ready(function(){
 		if(toBig == true){
 			return;
 		} else {
+			movesCounter();
 			$('#' + col).append(brick);
 			$('#' + col).on('click', moveBricks);
+			
 		};
 }
 // Compair brick sizes when dropping
@@ -77,6 +79,7 @@ $(document).ready(function(){
 			return;
 		}else {
 		if (parseInt(firstKidId.charAt(5)) > parseInt(brickId.charAt(5))){
+		alert('Waa Waa Waa');
 		return true;
 		} else {
 		return false;
@@ -136,6 +139,11 @@ function cloneBrick(brick) {
 		console.log('clone' + clone);
 		$(hoverCol).appendTo(clone);
 	}
+// Rick Roll the winner
+	function rickRoll() {
+		if(confirm("Congradulations! You have Won! Click here to get your Reward")) {
+			document.location = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=player_embedded'}
+	}
 // Event listeners
 	level.on('change', getLevel)
 	$('#col1').on('click',timeStart);
@@ -149,7 +157,7 @@ function cloneBrick(brick) {
 		moveBricks(colId);
 		// cloneBrick(brick);
 	} else {
-		movesCounter();
+		// movesCounter();
 		getID(this);
 		appendBrick(colId, brick)
 		}
@@ -158,6 +166,7 @@ function cloneBrick(brick) {
 		stopInterval();
 		// reset();
 		dickButt();
+		rickRoll();
 		// alert('winner!');
 	} 
 	})
