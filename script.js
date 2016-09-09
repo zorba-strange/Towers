@@ -110,7 +110,7 @@ function reset(){
    count=0;
 	}
 // Change background image on win
-	function dickButt(){
+	function imageWin(){
 		$('.brick').css('background-image', 'url(dino.jpg)');
 		$('.brick').css('background-size', '100%');
 		// $('.brick').css('videoSource', 'https://youtu.be/dQw4w9WgXcQ');
@@ -144,6 +144,8 @@ function cloneBrick(brick) {
 		if(confirm("Congradulations! You have Won! Click here to get your Reward")) {
 			document.location = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=player_embedded'}
 	}
+	// Function to solve the game
+	function gameSolve(brick, startCol, destination, aux)
 // Event listeners
 	level.on('change', getLevel)
 	$('#col1').on('click',timeStart);
@@ -165,7 +167,7 @@ function cloneBrick(brick) {
 		$('audio').get(0).play();
 		stopInterval();
 		// reset();
-		dickButt();
+		imageWin();
 		rickRoll();
 		// alert('winner!');
 	} 
